@@ -1,0 +1,1 @@
+bash -c "sleep 30 && ./tvmaze2xml.sh && mythfrontend --service"
