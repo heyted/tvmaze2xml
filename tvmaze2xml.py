@@ -39,7 +39,7 @@ else:
             start = time[0:4]+time[5:7]+time[8:10]+time[11:13]+time[14:16]+time[17:19]+' '+time[19:22]+time[23:25]
             start_time = datetime.strptime(start[0:14], "%Y%m%d%H%M%S")
             stop_time = start_time + timedelta(minutes=runtime)
-            stop = stop_time.strftime("%Y%m%d%H%M%S")+' -0500'
+            stop = stop_time.strftime("%Y%m%d%H%M%S")+' '+time[19:22]+time[23:25]
             xml_file.write('  <programme start="'+start+'" stop="'+stop+'" channel="'+ch_id+'">'+'\n')
             xml_file.write('    <title lang="en">'+name+'</title>'+'\n')
             xml_file.write('    <desc lang="en">'+description+'</desc>'+'\n')
